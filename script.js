@@ -28,7 +28,7 @@ function addNewNote(text = '') {
   </button>
 </div>
 <div class="main ${text ? '' : 'hidden'}"></div>
-<textarea class="${text ? 'hidden' : ''}"></textarea>`;
+<textarea maxLength="250" class="${text ? 'hidden' : ''}"></textarea>`;
 
   const editBtn = note.querySelector('.edit');
   const deleteBtn = note.querySelector('.delete');
