@@ -2,17 +2,18 @@ const addBtn = document.getElementById('add');
 
 addBtn.addEventListener('click', () => addNewNote());
 function swapNodes(nodeArray) {
-  let node1 = nodeArray[0];
-  let node2 = nodeArray[1];
+  let nodeOne = nodeArray[0];
+  let nodeTwo = nodeArray[1];
 
-  const parent = node1.parentNode;
-  const sibling1 = node1.nextSibling === node2 ? node1 : node1.nextSibling;
+  const parent = nodeOne.parentNode;
+  const sibling1 =
+    nodeOne.nextSibling === nodeTwo ? nodeOne : nodeOne.nextSibling;
 
-  parent.insertBefore(node1, node2);
-  parent.insertBefore(node2, sibling1);
+  parent.insertBefore(nodeOne, nodeTwo);
+  parent.insertBefore(nodeTwo, sibling1);
 
-  node1.classList.remove('selected');
-  node2.classList.remove('selected');
+  nodeOne.classList.remove('selected');
+  nodeTwo.classList.remove('selected');
 }
 
 function addNewNote(text = '') {
